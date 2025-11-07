@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Practicum 2025 – Classical Conversations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <span class="hero__tag">Practicum Classical Conversations</span>
+        <h1 class="hero__title">Practicum 2025</h1>
+        <p class="hero__description">
+          Inscrições abertas para o encontro que inspira famílias a viverem uma educação
+          clássica em casa. Reserve sua vaga para uma imersão de aprendizado e conexão.
+        </p>
+        <div class="hero__meta">
+          <div class="hero__meta-item">
+            <span class="hero__meta-label">Quando</span>
+            <strong class="hero__meta-value">1º semestre de 2025</strong>
+          </div>
+          <div class="hero__meta-item">
+            <span class="hero__meta-label">Formato</span>
+            <strong class="hero__meta-value">Presencial · Vagas limitadas</strong>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="layout__column layout__column--info">
+        <article class="card card--info">
+          <h2 class="card__title">Por que participar?</h2>
+          <p class="card__lead">
+            O Practicum é uma jornada exclusiva para pais e educadores que fortalece a cosmovisão
+            cristã, aprofunda o método clássico e constrói comunidade.
+          </p>
+          <ul class="card__list">
+            <li>Workshops guiados por facilitadores Classical Conversations.</li>
+            <li>Discussões práticas sobre trivium, planejamento e discipulado.</li>
+            <li>Ambiente seguro para famílias, com espaços pensados para crianças.</li>
+          </ul>
+        </article>
+
+        <aside class="card card--highlight" role="note">
+          <div class="card__eyebrow">Pagamento</div>
+          <h3 class="card__subtitle">PIX exclusivo após inscrição</h3>
+          <p>
+            Nossa equipe enviará a chave e confirmação em até 48 horas depois de recebermos seus dados.
+            O pagamento garante sua vaga e materiais do evento.
+          </p>
+        </aside>
+      </section>
+
+      <section class="layout__column layout__column--form">
+        <div class="form-shell">
+          <header class="form-shell__header">
+            <h2 class="form-shell__title">Dados para inscrição</h2>
+            <p class="form-shell__subtitle">
+              Preencha com atenção. Após o envio, você receberá um e-mail de confirmação com os próximos passos.
+            </p>
+          </header>
+
+          <form id="form-practicum" novalidate>
+            <fieldset class="form-section">
+              <legend class="form-section__title">Contato principal</legend>
+              <div class="input-grid">
+                <div class="field field--full">
+                  <label for="nome">Nome completo</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Como está no documento"
+                    autocomplete="name"
+                    required
+                  />
+                  <small class="error-message" data-error-for="nome"></small>
+                </div>
+
+                <div class="field field--full">
+                  <label for="telefone">Telefone / WhatsApp</label>
+                  <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(DDD) 99999-9999"
+                    autocomplete="tel"
+                    required
+                  />
+                  <small>
+                    Usaremos esse contato para confirmar detalhes e enviar comunicações importantes.
+                  </small>
+                  <small class="error-message" data-error-for="telefone"></small>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+              <legend class="form-section__title">Família e crianças</legend>
+              <p class="form-section__description">
+                Informe se levará crianças para planejarmos atividades e suporte adequados.
+              </p>
+
+              <div class="input-grid">
+                <div class="field field--full">
+                  <label for="levaCriancas">Você levará criança(s)?</label>
+                  <select id="levaCriancas" name="levaCriancas" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="nao">Não</option>
+                    <option value="sim">Sim</option>
+                  </select>
+                  <small class="error-message" data-error-for="levaCriancas"></small>
+                </div>
+
+                <div class="field">
+                  <label for="quantidadeCriancas">Quantas crianças?</label>
+                  <input
+                    type="number"
+                    id="quantidadeCriancas"
+                    name="quantidadeCriancas"
+                    min="1"
+                    max="10"
+                    placeholder="Ex: 2"
+                    disabled
+                  />
+                  <small class="error-message" data-error-for="quantidadeCriancas"></small>
+                </div>
+
+                <div class="field">
+                  <label for="idadesCriancas">Idades</label>
+                  <input
+                    type="text"
+                    id="idadesCriancas"
+                    name="idadesCriancas"
+                    placeholder="Ex: 4 e 7 anos"
+                    disabled
+                  />
+                </div>
+
+                <div class="field field--full">
+                  <label for="observacoes">Observações adicionais</label>
+                  <textarea
+                    id="observacoes"
+                    name="observacoes"
+                    placeholder="Alergias, necessidades especiais, horários preferenciais..."
+                    disabled
+                  ></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <footer class="form-shell__footer">
+              <button class="submit-btn" type="submit">Quero participar</button>
+              <p class="assist-text">
+                Dúvidas? Escreva para
+                <a href="mailto:contato@classicalconversations.com">
+                  contato@classicalconversations.com
+                </a>
+              </p>
+            </footer>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <script src="./js/main.js" defer></script>
+  </body>
+</html>
+
